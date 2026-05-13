@@ -240,30 +240,56 @@ export default function Calculator() {
         <div className="bg-slate-950/80 rounded-[1.8rem] p-8 h-full flex flex-col relative z-10 backdrop-blur-xl border border-white/5">
           <h3 className="text-xl font-bold text-white mb-6">Расчет стоимости</h3>
           
-          <div className="space-y-4 flex-grow">
+          <div className="space-y-4 flex-grow relative">
             <div className="flex justify-between items-center pb-4 border-b border-white/5">
               <span className="text-slate-400">Авто в Европе</span>
-              <span className="font-medium text-white">{formatCurrency(results.carPriceRub)} ₽</span>
+              <span className={`font-medium text-white transition-all duration-500 ${results.totalRub > 0 ? "blur-md select-none" : ""}`}>
+                {formatCurrency(results.carPriceRub)} ₽
+              </span>
             </div>
             <div className="flex justify-between items-center pb-4 border-b border-white/5">
               <span className="text-slate-400">Таможенная пошлина</span>
-              <span className="font-medium text-white">{formatCurrency(results.customsDutyRub)} ₽</span>
+              <span className={`font-medium text-white transition-all duration-500 ${results.totalRub > 0 ? "blur-md select-none" : ""}`}>
+                {formatCurrency(results.customsDutyRub)} ₽
+              </span>
             </div>
             <div className="flex justify-between items-center pb-4 border-b border-white/5">
               <span className="text-slate-400 text-sm">Утильсбор (льготный)</span>
-              <span className="font-medium text-white">{formatCurrency(results.scrapageFeeRub)} ₽</span>
+              <span className={`font-medium text-white transition-all duration-500 ${results.totalRub > 0 ? "blur-md select-none" : ""}`}>
+                {formatCurrency(results.scrapageFeeRub)} ₽
+              </span>
             </div>
             <div className="flex justify-between items-center pb-4 border-b border-white/5">
               <span className="text-slate-400 text-sm">Оформление и доставка</span>
-              <span className="font-medium text-white">{formatCurrency(results.totalRub > 0 ? DELIVERY_AND_FEES : 0)} ₽</span>
+              <span className={`font-medium text-white transition-all duration-500 ${results.totalRub > 0 ? "blur-md select-none" : ""}`}>
+                {formatCurrency(results.totalRub > 0 ? DELIVERY_AND_FEES : 0)} ₽
+              </span>
             </div>
+
+            {results.totalRub > 0 && !showLeadForm && !success && (
+              <div className="absolute inset-0 z-20 flex items-center justify-center">
+                <a 
+                  href="https://t.me/Automigsup" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-blue-600/90 hover:bg-blue-500 text-white text-xs font-bold py-2 px-4 rounded-full backdrop-blur-sm border border-white/20 shadow-xl transition-all hover:scale-105"
+                >
+                  Написать менеджеру
+                </a>
+              </div>
+            )}
           </div>
 
-          <div className="mt-8 pt-6 border-t border-blue-500/20">
+          <div className="mt-8 pt-6 border-t border-blue-500/20 relative">
             <p className="text-slate-400 text-sm mb-1">Итоговая стоимость под ключ:</p>
-            <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-200">
+            <div className={`text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-200 transition-all duration-500 ${results.totalRub > 0 ? "blur-lg select-none" : ""}`}>
               {results.totalRub > 0 ? formatCurrency(results.totalRub) : "0"} ₽
             </div>
+            {results.totalRub > 0 && (
+              <div className="absolute bottom-10 left-0 right-0 flex justify-center pointer-events-none">
+                <span className="text-[10px] text-blue-400 font-bold uppercase tracking-tighter opacity-80 animate-pulse">Уточняйте у менеджера</span>
+              </div>
+            )}
             <p className="text-xs text-slate-500 mt-2">* Расчет является предварительным. Точная сумма зависит от курса валют ЦБ на день оплаты.</p>
           </div>
           
