@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автомиг — Пригон авто из Европы под ключ в РФ</title>
+    <meta name="description" content="Подбор, проверка, доставка, растаможка и оформление авто из Европы. Рассчитайте стоимость автомобиля под ключ и получите 3 варианта под ваш бюджет.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚘</text></svg>">
+    <link rel="stylesheet" href="assets/css/index.css">
+    
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+       window.YM_COUNTER_ID = 99999999; // ЗАГЛУШКА: заменить на ID счётчика
+       (function(m,e,t,r,i,k,a){
+          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();
+          for (var j = 0; j < document.scripts.length; j++) {
+            if (document.scripts[j].src === r) { return; }
+          }
+          k=e.createElement(t),a=e.getElementsByTagName(t)[0],
+          k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+       })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+       ym(window.YM_COUNTER_ID, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/99999999" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">Автомиг</div>
+            <nav class="nav-links">
+                <a href="#cases">Кейсы</a>
+                <a href="#calculator">Калькулятор</a>
+                <a href="#steps">Как работаем</a>
+                <a href="#team">Команда</a>
+                <a href="#reviews">Отзывы</a>
+                <a href="#faq">FAQ</a>
+                <a href="#" target="_blank" rel="noopener">Авито</a>
+            </nav>
+            <div class="header-right">
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 5px;">
+                    <a href="tel:+79809751463" class="btn-primary" style="padding: 10px 20px;">+7 (980) 975-14-63</a>
+                    <a href="#" onclick="openModal('callback-modal'); return false;" style="font-size: 13px; color: var(--text-muted); text-decoration: underline; transition: var(--transition);">Перезвоним за 2 минуты</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <video autoplay loop muted playsinline class="hero-video" poster="assets/img/hero_bg.png">
+            <!-- Сюда в будущем можно вставить ссылку на реальное видео, например: src="assets/video/cars.mp4" -->
+            <source src="" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <h1>Пригон авто из Европы под ключ в РФ за 14–20 дней</h1>
+            <p>Подберем, проверим и доставим автомобиль вашей мечты с выгодой до 30% по сравнению с рынком РФ. Полная юридическая чистота и гарантия сохранности.</p>
+            <ul class="hero-advantages">
+                <li>✅ Работаем по договору</li>
+                <li>✅ Проверка VIN и истории</li>
+                <li>✅ Фото/видео отчёт</li>
+                <li>✅ Без скрытых платежей</li>
+                <li>✅ Доставка в любой регион РФ</li>
+                <li>✅ Точный подбор под бюджет</li>
+            </ul>
+            <div class="hero-buttons">
+                <a href="#calculator" class="btn-primary">Рассчитать стоимость</a>
+                <button class="btn-secondary" onclick="openModal('callback-modal'); return false;">Консультация эксперта</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Placeholder (H2) -->
+    <section id="calculator">
+        <div class="container">
+            <h2 class="section-title">Подберем авто из Европы под ваш бюджет</h2>
+            <div class="calculator-box" style="max-width: 600px; margin: 0 auto; background: var(--card-bg); padding: 40px; border-radius: 16px; border: 1px solid var(--border-color);">
+                <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;">
+                    Заполните форму, и мы бесплатно подберем 3 лучших варианта автомобилей под ваши критерии с полным расчетом стоимости «под ключ».
+                </p>
+                <form id="calc-form">
+                    <div class="form-group-row">
+                        <div class="form-group"><input type="text" name="name" class="form-control" placeholder="Ваше имя" required></div>
+                        <div class="form-group"><input type="tel" name="phone" class="form-control" placeholder="Ваш телефон" required></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="budget" class="form-control" placeholder="Ваш бюджет (руб)" required>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%;">Получить расчёт (3 варианта)</button>
+                    <div class="policy-text">
+                        Нажимая на кнопку, вы соглашаетесь с <a href="policy.html" target="_blank">Политикой конфиденциальности</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cases Placeholder (H2) -->
+    <section id="cases">
+        <div class="container">
+            <h2 class="section-title">Реальные кейсы доставленных автомобилей</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>BMW X5 2021</h3>
+                    <p>Доставлен за 16 дней. Выгода клиента: 1.2 млн руб.</p>
+                </div>
+                <div class="card">
+                    <h3>Audi Q7 2020</h3>
+                    <p>Доставлен за 18 дней. Выгода клиента: 900 тыс. руб.</p>
+                </div>
+                <div class="card">
+                    <h3>Mercedes-Benz GLE 2022</h3>
+                    <p>Доставлен за 14 дней. Выгода клиента: 1.5 млн руб.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps Section -->
+    <section id="steps">
+        <div class="container">
+            <h2 class="section-title">Как проходит пригон авто под ключ</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>1. Ваша заявка</h3>
+                    <p>Вы оставляете заявку на сайте или пишете нам в мессенджер. Мы оперативно связываемся с вами.</p>
+                </div>
+                <div class="card">
+                    <h3>2. Подбор и расчет</h3>
+                    <p>Внимательно изучаем ваши пожелания, ищем варианты и делаем точный расчет стоимости «под ключ».</p>
+                </div>
+                <div class="card">
+                    <h3>3. Договор</h3>
+                    <p>Подписание официального договора, фиксирующего все условия и ваши гарантии.</p>
+                </div>
+                <div class="card">
+                    <h3>4. Выездная проверка</h3>
+                    <p>Наш эксперт в Европе лично выезжает к авто, проводит полную проверку и присылает вам отчет.</p>
+                </div>
+                <div class="card">
+                    <h3>5. Доставка и таможня</h3>
+                    <p>Бережная доставка авто в РФ, оплата пошлин и полное таможенное оформление.</p>
+                </div>
+                <div class="card">
+                    <h3>6. Передача ключей</h3>
+                    <p>Вы получаете готовый автомобиль с полным пакетом документов и ЭПТС.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section (H2) -->
+    <section id="team">
+        <div class="container">
+            <h2 class="section-title">Наша команда</h2>
+            <div class="grid-3 team-grid">
+                <div class="card team-card">
+                    <div class="team-photo" style="background-image: url('https://автомиг.com/team/surkov.png');"></div>
+                    <h3>Александр Сурков</h3>
+                    <p>Старший менеджер по подбору</p>
+                    <span class="team-desc">Опыт работы 7 лет. Лично подобрал и привез более 300 автомобилей из Европы.</span>
+                </div>
+                <div class="card team-card">
+                    <div class="team-photo" style="background-image: url('https://автомиг.com/team/zaitsev.png');"></div>
+                    <h3>Михаил Зайцев</h3>
+                    <p>Менеджер по подбору</p>
+                    <span class="team-desc">Специалист с 4-летним стажем. Поможет найти идеальный автомобиль строго под ваш бюджет и критерии.</span>
+                </div>
+                <div class="card team-card">
+                    <div class="team-photo" style="background-image: url('https://автомиг.com/team/minin.jpg');"></div>
+                    <h3>Дмитрий Минин</h3>
+                    <p>Менеджер по подбору</p>
+                    <span class="team-desc">Знает европейский рынок авто от и до. Тщательно проверяет историю каждого автомобиля перед покупкой.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Placeholder (H2) -->
+    <section id="reviews">
+        <div class="container">
+            <h2 class="section-title">Почему нам доверяют</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <p>«Заказывал X5, переживал за сроки, но ребята привезли даже на 2 дня раньше. Машина в идеале. Спасибо!» — Иван С.</p>
+                </div>
+                <div class="card">
+                    <p>«Отличный сервис. Полное сопровождение на всех этапах. Сэкономил почти миллион по сравнению с дилером.» — Алексей В.</p>
+                </div>
+                <div class="card">
+                    <p>«Спасибо за терпение при выборе! Перебрали десяток машин, пока не нашли ту самую. Рекомендую.» — Елена М.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <div class="container">
+            <h2 class="section-title">Частые вопросы</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>Сколько времени занимает доставка авто?</summary>
+                    <div class="faq-content">
+                        В среднем доставка и растаможка занимают от 14 до 20 дней с момента подписания договора и оплаты инвойса. Точный срок зависит от местоположения автомобиля в Европе.
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>Какие гарантии вы предоставляете?</summary>
+                    <div class="faq-content">
+                        Мы работаем исключительно по официальному договору. Предоставляем полный видео и фото отчет перед покупкой. Гарантируем юридическую чистоту сделки.
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>Как происходит проверка автомобиля?</summary>
+                    <div class="faq-content">
+                        Перед покупкой наш эксперт в Европе лично выезжает к автомобилю. Проверяется состояние кузова (ЛКП), техническая часть, история обслуживания и юридическая чистота. Мы предоставляем вам подробный фото- и видеоотчет.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Contacts -->
+    <footer id="contacts">
+        <div class="container">
+            <h2 class="section-title" style="margin-bottom: 40px; font-size: 32px;">Частые вопросы и Контакты</h2>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Автомиг</h4>
+                    <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 20px;">Надежный импорт автомобилей из Европы с гарантией.</p>
+                    <p style="color: var(--text-muted); font-size: 14px;">ИНН: 6314026804<br>ОГРН: 1066317029338</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="#cases">Кейсы</a></li>
+                        <li><a href="#calculator">Калькулятор</a></li>
+                        <li><a href="#steps">Как мы работаем</a></li>
+                        <li><a href="#team">Наша команда</a></li>
+                        <li><a href="#reviews">Отзывы</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Документы</h4>
+                    <ul>
+                        <li><a href="offer.html" target="_blank">Договор оферты</a></li>
+                        <li><a href="policy.html" target="_blank">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><a href="tel:+79809751463">+7 (980) 975-14-63</a></li>
+                        <li><a href="mailto:info@autoeurope.ru">info@autoeurope.ru</a></li>
+                        <li style="color: var(--text-muted); font-size: 14px; margin-top: 15px; line-height: 1.5;">
+                            443065, Самарская область,<br>г. Самара, Долотный пер., д.7, 10
+                        </li>
+                        <li><a href="https://t.me/username" target="_blank" rel="noopener">Telegram</a></li>
+                        <li><a href="https://wa.me/79809751463" target="_blank" rel="noopener">WhatsApp</a></li>
+                        <li><a href="#" target="_blank" rel="noopener">Max</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-disclaimer">
+                Информация на сайте не является публичной офертой. Итоговая стоимость автомобиля зависит от курса валют, таможенных платежей, доставки и состояния выбранного авто.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button Widget -->
+    <div class="fab-container">
+        <div class="fab-menu">
+            <div class="fab-menu-header">Ответим онлайн</div>
+            <a href="https://t.me/username" class="fab-menu-item tg-item" target="_blank" rel="noopener">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.94z"/></svg>
+                <span>Telegram</span>
+            </a>
+            <a href="https://wa.me/79809751463" class="fab-menu-item wa-item" target="_blank" rel="noopener">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 0C5.383 0 0 5.383 0 12.031c0 2.124.553 4.195 1.602 6.012L.15 24l6.095-1.6c1.78.963 3.774 1.47 5.786 1.47 6.648 0 12.031-5.383 12.031-12.031C24 5.383 18.679 0 12.031 0zm3.565 17.067c-.161.455-.941.87-1.3.916-.36.045-.856.124-2.82-.693-2.368-.98-3.87-3.41-3.987-3.568-.116-.157-.951-1.267-.951-2.417s.597-1.716.812-1.939c.214-.223.468-.279.624-.279.156 0 .312 0 .445.006.14.007.327-.054.512.393.187.452.624 1.528.678 1.638.055.111.09.241.012.398-.078.156-.117.253-.234.39-.117.137-.245.301-.351.42-.116.124-.241.258-.109.485.132.227.587.97 1.264 1.572.875.778 1.608 1.02 1.83 1.13.222.111.353.093.486-.057.132-.149.57-0.663.722-.89.152-.228.305-.189.511-.111.206.078 1.305.615 1.527.727.222.111.37.166.425.258.055.093.055.54-.106.995z"/></svg>
+                <span>WhatsApp</span>
+            </a>
+            <a href="#" class="fab-menu-item max-item" target="_blank" rel="noopener">
+                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="12" fill="currentColor"/><path d="M7 16V8h2.5L12 12.5 14.5 8H17v8h-2v-4.5L12 14.5l-3-3V16H7z" fill="#0f172a"/></svg>
+                <span>Max</span>
+            </a>
+            <a href="#" class="fab-menu-item chat-item" onclick="openModal('chat-modal'); return false;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                <span>Написать на сайте</span>
+            </a>
+        </div>
+        <button class="fab-main">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal-overlay" id="callback-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h3 style="margin-bottom: 10px; font-size: 24px; color: var(--text-color);">Перезвоним за 2 минуты!</h3>
+            <p style="margin-bottom: 20px; color: var(--text-muted);">Оставьте свой номер, и наш первый освободившийся эксперт свяжется с вами.</p>
+            <form class="modal-form">
+                <input type="tel" name="phone" class="form-control" placeholder="Ваш телефон" required style="margin-bottom: 15px;">
+                <input type="hidden" name="type" value="Обратный звонок (перезвонить за 2 минуты)">
+                <button type="submit" class="btn-primary" style="width: 100%;">Жду звонка</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="chat-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h3 style="margin-bottom: 10px; font-size: 24px; color: var(--text-color);">Написать онлайн</h3>
+            <p style="margin-bottom: 20px; color: var(--text-muted);">Задайте ваш вопрос, и мы ответим прямо здесь или перезвоним.</p>
+            <form class="modal-form">
+                <textarea name="user_message" class="form-control" placeholder="Ваш вопрос..." required style="margin-bottom: 15px; min-height: 80px; resize: none;"></textarea>
+                <input type="tel" name="phone" class="form-control" placeholder="Ваш телефон для ответа" required style="margin-bottom: 15px;">
+                <input type="hidden" name="type" value="Вопрос из онлайн-чата">
+                <button type="submit" class="btn-primary" style="width: 100%;">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js?v=5"></script>
+</body>
+</html>

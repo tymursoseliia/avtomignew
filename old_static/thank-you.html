@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спасибо за заявку — Автомиг</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚘</text></svg>">
+    <link rel="stylesheet" href="assets/css/index.css">
+    
+    <style>
+        .thank-you-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .thank-you-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 50px;
+            border-radius: 16px;
+            max-width: 600px;
+            backdrop-filter: blur(10px);
+        }
+        .thank-you-box h1 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        .thank-you-box p {
+            margin-bottom: 30px;
+            font-size: 18px;
+            color: var(--text-muted);
+        }
+    </style>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+       window.YM_COUNTER_ID = 99999999; // ЗАГЛУШКА: заменить на ID счётчика
+       (function(m,e,t,r,i,k,a){
+          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();
+          for (var j = 0; j < document.scripts.length; j++) {
+            if (document.scripts[j].src === r) { return; }
+          }
+          k=e.createElement(t),a=e.getElementsByTagName(t)[0],
+          k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+       })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+       ym(window.YM_COUNTER_ID, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+       });
+       
+       // Можно дублировать JS событие, хотя обычно хватает настройки цели по URL
+       ym(window.YM_COUNTER_ID, 'reachGoal', 'thank_you_page');
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/99999999" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+</head>
+<body>
+
+    <section class="thank-you-section">
+        <div class="container">
+            <div class="thank-you-box">
+                <h1>Спасибо за вашу заявку!</h1>
+                <p>Мы получили ваши данные и уже начали готовить расчет стоимости для желаемого авто. Наш менеджер свяжется с вами в ближайшее время.</p>
+                <a href="index.html" class="btn-primary">Вернуться на главную</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
