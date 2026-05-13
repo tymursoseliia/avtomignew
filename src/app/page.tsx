@@ -114,7 +114,7 @@ export default async function Home() {
           </div>
           
           <div className="flex flex-wrap justify-center gap-6">
-            <a href="#" className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors group">
+            <a href="https://yandex-maps.online/maps/240/samara/house/dolotnyy_per_7_10/YEAYdA5oTEQHQFtpfxlxcnhgbQ==?from=mapframe&ll=50.0811%2C53.1208&pt=50.0811%2C53.1208&source=mapframe&utm_source=mapframe&z=18.61" className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors group">
               <div className="w-10 h-10 rounded-full bg-slate-900 border border-white/10 group-hover:border-red-500/50 flex items-center justify-center font-bold text-red-500">
                 Я
               </div>
